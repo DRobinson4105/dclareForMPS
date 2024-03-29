@@ -116,7 +116,7 @@ public class DObserved<O extends DMutable, T> extends Observed<O, T> implements 
         if (!DMutable.READ_OBSERVEDS.add(object, this).contains(this)) {
             if (DClareMPS.instance().getConfig().isTraceActivation()) {
                 LeafTransaction current = LeafTransaction.getCurrent();
-                current.runNonObserving(() -> System.err.println(DclareTrace.getLineStart("ACTIVATE", current) + object + "." + this));
+                current.runSilent(() -> System.err.println(DclareTrace.getLineStart("ACTIVATE", current) + object + "." + this));
             }
             super.set(object, fromMPS(object));
         }
@@ -177,7 +177,7 @@ public class DObserved<O extends DMutable, T> extends Observed<O, T> implements 
                     triggerInitRead(object);
                 }
             } else if (!isDclareOnly() && object.isObserving() && !DMutable.READ_OBSERVEDS.add(object, this).contains(this) && DClareMPS.instance().getConfig().isTraceActivation()) {
-                tx.runNonObserving(() -> System.err.println(DclareTrace.getLineStart("ACTIVATE", tx) + object + "." + this));
+                tx.runSilent(() -> System.err.println(DclareTrace.getLineStart("ACTIVATE", tx) + object + "." + this));
             }
         }
         object.activate(false);
@@ -196,7 +196,7 @@ public class DObserved<O extends DMutable, T> extends Observed<O, T> implements 
                     return super.get(object);
                 }
             } else if (!DMutable.READ_OBSERVEDS.add(object, this).contains(this) && DClareMPS.instance().getConfig().isTraceActivation()) {
-                tx.runNonObserving(() -> System.err.println(DclareTrace.getLineStart("ACTIVATE", tx) + object + "." + this));
+                tx.runSilent(() -> System.err.println(DclareTrace.getLineStart("ACTIVATE", tx) + object + "." + this));
             }
         }
         if (isReference() && object.isObserving()) {
