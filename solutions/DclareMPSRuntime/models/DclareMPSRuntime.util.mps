@@ -5124,7 +5124,7 @@
               <ref role="37wK5l" to="kag7:~LeafTransaction.getCurrent()" resolve="getCurrent" />
             </node>
             <node concept="liA8E" id="1vHs6rJYEIL" role="2OqNvi">
-              <ref role="37wK5l" to="kag7:~LeafTransaction.runNonObserving(java.lang.Runnable)" resolve="runNonObserving" />
+              <ref role="37wK5l" to="kag7:~LeafTransaction.runSilent(java.lang.Runnable)" resolve="runSilent" />
               <node concept="1bVj0M" id="1vHs6rJYNWw" role="37wK5m">
                 <node concept="3clFbS" id="1vHs6rJYNWy" role="1bW5cS">
                   <node concept="3clFbF" id="1vHs6rJYO0D" role="3cqZAp">
