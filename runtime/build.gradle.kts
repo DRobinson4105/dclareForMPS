@@ -29,7 +29,7 @@ dependencies {
 
     compileOnly(mpsJar("debugger-api"))
     compileOnly(mpsJar("forms_rt"))
-    compileOnly(mpsJar("jetbrains-annotations"))
+    compileOnly(mpsJar("annotations"))
     compileOnly(mpsJar("mps-behavior-runtime"))
     compileOnly(mpsJar("mps-closures"))
     compileOnly(mpsJar("mps-core"))
@@ -41,6 +41,7 @@ dependencies {
     compileOnly(mpsJar("mps-platform"))
     compileOnly(mpsJar("app"))
     compileOnly(mpsJar("util"))
+    compileOnly(mpsJar("util-8"))
 }
 publishing {
     publications {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="DclareRuntime" uuid="e584ff77-930e-4637-8df0-b4c8d3b6de91" moduleVersion="0" compileInMPS="true">
+<solution name="DclareRuntime" uuid="e584ff77-930e-4637-8df0-b4c8d3b6de91" moduleVersion="0">
   <models>
     <modelRoot contentPath="${module}" type="default" />
     <modelRoot contentPath="${module}/lib" type="java_classes">
@@ -10,16 +10,13 @@
     </modelRoot>
   </models>
   <facets>
-    <facet languageLevel="JAVA_10" type="java" compile="mps" classes="mps" ext="no">
+    <facet type="java" languageLevel="JAVA_10" compile="mps" classes="mps" ext="no">
       <classes generated="true" path="${module}/classes_gen" />
+      <library location="${module}/lib/dclare.jar" />
+      <library location="${module}/lib/immutable-collections.jar" />
+      <library location="${module}/lib/mvg-json.jar" />
     </facet>
   </facets>
-  <stubModelEntries>
-    <stubModelEntry path="${module}/lib/dclare.jar" />
-    <stubModelEntry path="${module}/lib/immutable-collections.jar" />
-    <stubModelEntry path="${module}/lib/mvg-json.jar" />
-  </stubModelEntries>
-  <sourcePath />
   <dependencies>
     <dependency reexport="true">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
   </dependencies>
