@@ -1159,18 +1159,6 @@
             <ref role="3bR37D" to="ffeo:7Kfy9QB6LaO" resolve="jetbrains.mps.lang.structure" />
           </node>
         </node>
-        <node concept="3rtmxn" id="3E71z7ur9xC" role="3bR31x">
-          <node concept="3LXTmp" id="3E71z7ur9xD" role="3rtmxm">
-            <node concept="55IIr" id="3E71z7ur9xE" role="3LXTmr">
-              <node concept="2Ry0Ak" id="4PMfL9tOogq" role="iGT6I">
-                <property role="2Ry0Am" value="solutions" />
-              </node>
-            </node>
-            <node concept="3qWCbU" id="3E71z7ur9xI" role="3LXTna">
-              <property role="3qWCbO" value="DclareMPSPlugin/plugin/*.png" />
-            </node>
-          </node>
-        </node>
         <node concept="1SiIV0" id="7NjRQfy0R5a" role="3bR37C">
           <node concept="3bR9La" id="7NjRQfy0R5b" role="1SiIV1">
             <ref role="3bR37D" to="ffeo:7Kfy9QB6L6C" resolve="jetbrains.mps.lang.generator" />
@@ -1280,6 +1268,24 @@
         <node concept="1SiIV0" id="16rkSAyrF8j" role="3bR37C">
           <node concept="3bR9La" id="16rkSAyrF8k" role="1SiIV1">
             <ref role="3bR37D" to="ffeo:2eDSGe9d1qi" resolve="jetbrains.mps.ide" />
+          </node>
+        </node>
+        <node concept="3rtmxn" id="GnIwx79TXg" role="3bR31x">
+          <node concept="3LXTmp" id="GnIwx79TXh" role="3rtmxm">
+            <node concept="55IIr" id="GnIwx79TXi" role="3LXTmr">
+              <node concept="2Ry0Ak" id="GnIwx79TXj" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="GnIwx79TXk" role="2Ry0An">
+                  <property role="2Ry0Am" value="DclareMPSPlugin" />
+                  <node concept="2Ry0Ak" id="GnIwx79TYn" role="2Ry0An">
+                    <property role="2Ry0Am" value="source_gen" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="GnIwx79TXl" role="3LXTna">
+              <property role="3qWCbO" value="**/*.svg" />
+            </node>
           </node>
         </node>
       </node>
