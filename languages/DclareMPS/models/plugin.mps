@@ -58,7 +58,7 @@
       <property role="2V$B1Q" value="DclareMPS" />
     </node>
     <node concept="1QGGSu" id="59OKK4YdgrE" role="3vqPLo">
-      <property role="1iqoE4" value="${module}/icons/dclare.svg" />
+      <property role="1iqoE4" value="${module}/icons/dclare-folder.svg" />
     </node>
     <node concept="2vPdvu" id="59OKK4YqMVw" role="3F_NFc">
       <node concept="1SjbrP" id="59OKK4YqMVF" role="2vPdvg">
