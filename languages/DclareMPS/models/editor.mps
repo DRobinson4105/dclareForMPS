@@ -10108,5 +10108,20 @@
     <node concept="B$lHz" id="6XLqJiNyIty" role="2wV5jI" />
     <node concept="B$lHz" id="6XLqJiNyItF" role="6VMZX" />
   </node>
+  <node concept="24kQdi" id="7HxEATyVRxo">
+    <property role="3GE5qa" value="structs" />
+    <ref role="1XX52x" to="7ggn:7HxEATyVRwN" resolve="StructClassOperation" />
+    <node concept="PMmxH" id="7HxEATyVRxu" role="2wV5jI">
+      <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7HxEATz9GKJ">
+    <property role="3GE5qa" value="structs" />
+    <ref role="1XX52x" to="7ggn:7HxEATz95uz" resolve="StructClassType" />
+    <node concept="PMmxH" id="7HxEATz9GKR" role="2wV5jI">
+      <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      <ref role="1k5W1q" to="tpen:hgVS8CF" resolve="KeyWord" />
+    </node>
+  </node>
 </model>
 
