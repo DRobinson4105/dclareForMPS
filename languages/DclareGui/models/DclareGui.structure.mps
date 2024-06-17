@@ -137,9 +137,12 @@
     </node>
   </node>
   <node concept="PlHQZ" id="3psr82$c6ii">
-    <property role="TrG5h" value="IRootComponent" />
+    <property role="TrG5h" value="ISingleRootComponent" />
     <property role="EcuMT" value="699348237883893817" />
     <property role="3GE5qa" value="gui" />
+    <node concept="PrWs8" id="7jkrzkVxKDb" role="PrDN$">
+      <ref role="PrY4T" node="7jkrzkVxKBQ" resolve="IRootComponentContainer" />
+    </node>
   </node>
   <node concept="PlHQZ" id="3psr82$eZ54">
     <property role="TrG5h" value="IDiagram" />
@@ -158,7 +161,7 @@
       <ref role="20lvS9" node="31sbKqyPLDe" resolve="NodeLayout" />
     </node>
     <node concept="PrWs8" id="3psr82$cO_x" role="PrDN$">
-      <ref role="PrY4T" node="3psr82$c6ii" resolve="IRootComponent" />
+      <ref role="PrY4T" node="3psr82$c6ii" resolve="ISingleRootComponent" />
     </node>
   </node>
   <node concept="1TIwiD" id="67eN9QkffP5">
@@ -171,6 +174,11 @@
       <property role="IQ2nx" value="1206108215291310920" />
       <property role="TrG5h" value="manual" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="7jkrzkZwtHY" role="1TKVEl">
+      <property role="IQ2nx" value="8418474778440096638" />
+      <property role="TrG5h" value="virtualPackageFilter" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
     <node concept="PrWs8" id="67eN9QkffP6" role="PzmwI">
       <ref role="PrY4T" node="3psr82$eZ54" resolve="IDiagram" />
@@ -276,6 +284,11 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="7ggn:4$bpWrNHO7E" resolve="StructClass" />
     </node>
+  </node>
+  <node concept="PlHQZ" id="7jkrzkVxKBQ">
+    <property role="EcuMT" value="8418474778373327350" />
+    <property role="3GE5qa" value="gui" />
+    <property role="TrG5h" value="IRootComponentContainer" />
   </node>
 </model>
 
