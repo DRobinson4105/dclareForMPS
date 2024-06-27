@@ -22,6 +22,7 @@
     <dependency reexport="false">86ef8290-12bb-4ca7-947f-093788f263a9(jetbrains.mps.lang.project)</dependency>
   </dependencies>
   <languageVersions>
+    <language slang="l:ce36526d-d793-4b8b-88e9-d1815f616441:DclareGui" version="0" />
     <language slang="l:c32b788d-8e4b-4023-97f5-3e90d04ed77b:DclareMPS" version="5" />
     <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="12" />
     <language slang="l:774bf8a0-62e5-41e1-af63-f4812e60e48b:jetbrains.mps.baseLanguage.checkedDots" version="0" />

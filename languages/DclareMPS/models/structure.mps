@@ -1964,7 +1964,7 @@
     <property role="3GE5qa" value="structs" />
     <property role="TrG5h" value="StructClassOperation" />
     <property role="34LRSv" value="class" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="7HxEATyVRxd" role="PzmwI">
       <ref role="PrY4T" to="tpee:hqOqG0K" resolve="IOperation" />
     </node>
