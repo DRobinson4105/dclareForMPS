@@ -877,6 +877,11 @@
             </node>
           </node>
         </node>
+        <node concept="1SiIV0" id="2uyqCQrzG6x" role="3bR37C">
+          <node concept="3bR9La" id="2uyqCQrzG6y" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:4m1I2e4jdlp" resolve="MPS.Boot" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="1OC_PYbrjI5" role="2G$12L">
         <property role="TrG5h" value="DclareRuntime" />
