@@ -6304,14 +6304,6 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="1lu3ecT$kF7" role="3cqZAp">
-          <node concept="37vLTI" id="1lu3ecT$m9u" role="3clFbG">
-            <node concept="10Nm6u" id="1lu3ecT$pP6" role="37vLTx" />
-            <node concept="5IyTM" id="1lu3ecT$kF5" role="37vLTJ">
-              <ref role="3cqZAo" node="76QCTJD2Tzy" resolve="component" />
-            </node>
-          </node>
-        </node>
       </node>
       <node concept="1OA3wd" id="17hC4n5Oa$w" role="1OA3wj">
         <property role="TrG5h" value="focusAdapter" />
