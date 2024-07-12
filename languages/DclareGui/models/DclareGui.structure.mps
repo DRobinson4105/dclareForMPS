@@ -158,6 +158,11 @@
       <property role="TrG5h" value="antiCrossings" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
+    <node concept="1TJgyi" id="3SChBII2aLU" role="1TKVEl">
+      <property role="IQ2nx" value="4478907326434684026" />
+      <property role="TrG5h" value="autoCentre" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="1TJgyj" id="31sbKqyPLDh" role="1TKVEi">
       <property role="IQ2ns" value="3484711917226236497" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
