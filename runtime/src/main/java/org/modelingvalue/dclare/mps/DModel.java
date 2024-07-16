@@ -25,7 +25,6 @@ import static org.modelingvalue.dclare.CoreSetableModifier.plumbing;
 import static org.modelingvalue.dclare.mps.DServerMetaData.SHARED_MODELS;
 
 import java.util.Collections;
-import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -40,7 +39,12 @@ import org.jetbrains.mps.openapi.persistence.ModelRoot;
 import org.modelingvalue.collections.Collection;
 import org.modelingvalue.collections.Set;
 import org.modelingvalue.collections.util.Pair;
-import org.modelingvalue.dclare.*;
+import org.modelingvalue.dclare.Constant;
+import org.modelingvalue.dclare.LeafTransaction;
+import org.modelingvalue.dclare.Observed;
+import org.modelingvalue.dclare.Observer;
+import org.modelingvalue.dclare.Setable;
+import org.modelingvalue.dclare.State;
 
 import jetbrains.mps.errors.item.ModelReportItem;
 import jetbrains.mps.extapi.model.SModelBase;
@@ -56,9 +60,6 @@ import jetbrains.mps.smodel.SModelInternal;
 
 @SuppressWarnings("unused")
 public class DModel extends DNewable<DModel, SModelReference, SModel> implements SModel {
-
-    @SuppressWarnings({"unchecked", "rawtypes"})
-    private static final Consumer<DModel>                                        INIT_ROOT_CONSUMER         = m -> m.addRoot(((Pair<String, DNode>) ((Action) LeafTransaction.getCurrent().leaf()).id()).b());
 
     protected static final Constant<SModel, Boolean>                             EXTERNAL                   = Constant.of("EXTERNAL", DModel::isExternal);
 
@@ -108,7 +109,7 @@ public class DModel extends DNewable<DModel, SModelReference, SModel> implements
     @SuppressWarnings({"deprecation", "removal"})
     public static final DObserved<DModel, Set<DevKit>>                           USED_DEVKITS               = DObserved.of("USED_DEVKITS", Set.of(), dModel -> {
                                                                                                                 SModelInternal sModel = (SModelInternal) dModel.tryOriginal();
-                                                                                                                return sModel != null ? Collection.of(sModel.importedDevkits()).                                                                                //
+                                                                                                                return sModel != null ? Collection.of(sModel.importedDevkits()).                                                                          //
                                                                                                                         map(r -> r.resolve(MPSModuleRepository.getInstance())).filter(DevKit.class).asSet() : Set.of();
                                                                                                             }, (dModel, pre, post) -> {
                                                                                                                 SModelInternal sModel = (SModelInternal) dModel.tryOriginal();
@@ -119,7 +120,7 @@ public class DModel extends DNewable<DModel, SModelReference, SModel> implements
 
     public static final DObserved<DModel, Set<DModel>>                           USED_MODELS                = DObserved.of("USED_MODELS", Set.of(), dModel -> {
                                                                                                                 SModelInternal sModel = (SModelInternal) dModel.tryOriginal();
-                                                                                                                return sModel != null ? Collection.of(((SModelInternal) sModel).getModelImports()).                                                             //
+                                                                                                                return sModel != null ? Collection.of(((SModelInternal) sModel).getModelImports()).                                                       //
                                                                                                                         map(r -> r.resolve(null)).notNull().map(DModel::of).asSet() : Set.of();
                                                                                                             }, (o, pre, post) -> {
                                                                                                                 SModelInternal sModel = (SModelInternal) o.tryOriginal();
@@ -174,14 +175,6 @@ public class DModel extends DNewable<DModel, SModelReference, SModel> implements
     public static DModel of(IRuleSet ruleSet, String anonymousType, Object[] identity, boolean temporal) {
         return quotationConstruct(ruleSet, anonymousType, identity, //
                 () -> new DModel(new Object[]{DClareMPS.uniqueLong(), temporal, false}));
-    }
-
-    protected void triggerAddRoot(DNode root) {
-        Action.of(Pair.of("$ADD_ROOT", root), INIT_ROOT_CONSUMER, LeafModifier.preserved, LeafModifier.read).trigger(this);
-    }
-
-    private Object addRoot(DNode b) {
-        return ROOTS.add(this, b);
     }
 
     @SuppressWarnings("deprecation")

@@ -63,7 +63,7 @@ public class DModule extends DFromOriginalObject<SModule> implements SModule {
     public static final DObserved<DModule, Set<DModel>>        MODELS               = DObserved.of("MODELS", Set.of(), m -> {
                                                                                         return m.models().map(DModel::of).asSet();
                                                                                     }, (m, pre, post) -> {
-                                                                                        if (m.isSolution()) {
+                                                                                        if (!m.isExternal()) {
                                                                                             SModule sModule = m.original();
                                                                                             Setable.<Set<DModel>, DModel> diff(pre, post,                                          //
                                                                                                     a -> {
@@ -145,9 +145,9 @@ public class DModule extends DFromOriginalObject<SModule> implements SModule {
     protected void read(DClareMPS dClareMPS) {
         if (!isExternal()) {
             CONTAINED.set(this, Boolean.TRUE);
-            MODELS.triggerInitRead(this);
             LANGUAGES.triggerInitRead(this);
             DEPENDENCIES.triggerInitRead(this);
+            MODELS.triggerInitRead(this);
         }
     }
 
